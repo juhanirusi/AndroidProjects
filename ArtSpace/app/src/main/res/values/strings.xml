@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Art Space</string>
+    <string name="masterpiece">A Masterpiece</string>
+    <string name="black_and_white_woman">Sad Black And White Woman</string>
+    <string name="flowers">Flowers</string>
+    <string name="two_horses">Two Amazing Horses</string>
+    <string name="a_huge_mess">A Huge Mess</string>
+    <string name="singing_birds">Singing Birds</string>
+    <string name="cottages_mountain">Cottages On A Mountain</string>
+    <string name="color_mess">A Huge Mess</string>
+
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+</resources>
