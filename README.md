@@ -11,3 +11,7 @@ Here are the different tools, libraries and services I've used in the above proj
 1. ArtSpace
 2. BusinessCard
 3. ThirtyTips
+
+### Coil (Coroutine Image Loader) - [Duck Duck Go](https://github.com/coil-kt/coil)
+
+1. ThirtyTips
