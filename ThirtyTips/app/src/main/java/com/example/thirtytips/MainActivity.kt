@@ -60,7 +60,7 @@ fun TipsPreviewLight() {
 }
 
 //@Preview(showBackground = true)
-@Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Preview("Dark Theme")
 @Composable
 fun TipsPreviewDark() {
     ThirtyTipsTheme(darkTheme = true) {

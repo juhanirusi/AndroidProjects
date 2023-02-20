@@ -21,6 +21,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -28,13 +29,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.example.thirtytips.model.Tip
 
 
 @Composable
 fun TipsList(tips: List<Tip>, paddingValues: PaddingValues) {
     LazyColumn(Modifier.padding(paddingValues)) {
-        itemsIndexed(tips) {index, tip ->
+        itemsIndexed(tips) { index, tip ->
             TipItem(tip = tip, index = index + 1)
         }
     }
@@ -63,7 +65,8 @@ fun TipItem(tip: Tip, index: Int, modifier: Modifier = Modifier) {
                     .padding(bottom = 10.dp)
                     .background(
                         MaterialTheme.colors.secondary,
-                        shape = CircleShape)
+                        shape = CircleShape
+                    )
                     .padding(horizontal = 50.dp, vertical = 8.dp),
                 text = stringResource(R.string.tip_count, index),
                 style = MaterialTheme.typography.h2,
@@ -88,10 +91,7 @@ fun TipImage(@DrawableRes tipImage: Int, modifier: Modifier = Modifier) {
             .padding(vertical = 16.dp)
             .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
     ) {
-        Image(
-            painter = painterResource(id = tipImage),
-            contentDescription = null
-        )
+        AsyncImage(model = tipImage, contentDescription = null)
     }
 }
 
@@ -104,11 +104,6 @@ fun TipDescription(tipDescriptionRes: Int, showMore: Boolean, modifier: Modifier
                 color = MaterialTheme.colors.onPrimary,
                 RoundedCornerShape(bottomEnd = 16.dp, bottomStart = 16.dp)
             )
-//            .border(
-//                width = 2.dp,
-//                color = MaterialTheme.colors.onSurface,
-//                shape = RoundedCornerShape(bottomEnd = 16.dp, bottomStart = 16.dp)
-//            )
     ) {
         Column(
             modifier = Modifier.animateContentSize(
