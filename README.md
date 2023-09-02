@@ -1,6 +1,6 @@
 # Android Projects 👨‍💻
 
-A collection of Android projects I've made myself from start to finish.
+A collection of small Android projects I've made myself from start to finish.
 
 ## Tools Used In The Projects...
 
